@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 
-import { TextInput, Button, Text } from '../../../components/common'
+import { TextInput, Button, OutlineButton, Text } from '../../../components/common'
 
 import { styles } from './styles'
 
@@ -9,6 +9,7 @@ export const SignUpForm = ({
   values,
   handleSubmit,
   handleChange,
+  goBack,
 }) => (
   <View>
     <TextInput
@@ -39,10 +40,23 @@ export const SignUpForm = ({
       secureTextEntry
     />
     <Button
-      styleButton={styles.buttonSubmit}
+      styleButton={styles.signUpButton}
       onPress={handleSubmit}
     >
-      <Text style={styles.buttonSubmitText}>Зарегистрироваться</Text>
+      <Text style={styles.buttonText}>Зарегистрироваться</Text>
     </Button>
+    <OutlineButton
+      styleButton={styles.signInButton}
+      onPress={() => goBack()}
+    >
+      <Text
+        style={{
+          ...styles.buttonText,
+          ...styles.outlineButtonText
+        }}
+      >
+        Войти
+      </Text>
+    </OutlineButton>
   </View>
 )

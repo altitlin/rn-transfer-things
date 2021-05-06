@@ -6,4 +6,5 @@ export const THEME = {
   MINE_SHAFT: '#3d3d3d',
   DODGER_BLUE: '#328afb',
   CERULEAN: '#04b9e6',
+  MACARONI: '#ffb278',
 }

@@ -1,13 +1,31 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 import { THEME } from '../../constants'
 
+const { height } = Dimensions.get('window')
+const HEIGHT_LOGO = height * 0.28
+
 export const styles = StyleSheet.create({
-  body: {
-    alignItems: 'stretch',
+  wrapper: {
+    flex: 1,
+    backgroundColor: THEME.MACARONI,
+  },
+  header: {
+    flex: 2,
     justifyContent: 'center',
-    paddingTop: 70,
+    alignItems: 'center',
+  },
+  footer: {
+    flex: 1,
+    backgroundColor: THEME.WHITE,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    paddingVertical: 50,
     paddingHorizontal: 30,
+  },
+  logo: {
+    width: HEIGHT_LOGO,
+    height: HEIGHT_LOGO,
   },
   title: {
     color: THEME.TUNBORA,
@@ -21,28 +39,16 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 21,
     textAlign: 'center',
-    marginBottom: 120,
+    marginBottom: 60,
   },
-  button: {
-    marginBottom: 10,
-  },
+  button: {},
   buttonText: {
-    color: '#ffffff',
+    color: THEME.WHITE,
     fontFamily: 'roboto-regular',
     fontSize: 16,
     lineHeight: 18,
     letterSpacing: 0.75,
     fontWeight: 'bold',
     textAlign: 'center',
-  },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  footerText: {
-    color: '#4a4a4a',
-    fontSize: 14,
-    lineHeight: 16,
-    letterSpacing: 0.75,
   },
 })
