@@ -5,7 +5,6 @@ import { SIGNUP } from '../../../constants'
 import {
   TextInput,
   Button,
-  OutlineButton,
   LinkButton,
   Text
 } from '../../../components/common'
@@ -42,9 +41,10 @@ export const LoginForm = ({
     >
       <Text style={styles.buttonText}>Войти</Text>
     </Button>
-    <OutlineButton
+    <Button
       styleButton={styles.signUpButton}
       onPress={() => navigate(SIGNUP)}
+      outline
     >
       <Text
         style={{
@@ -54,7 +54,7 @@ export const LoginForm = ({
       >
         Зарегистрироваться
       </Text>
-    </OutlineButton>
+    </Button>
     <LinkButton
       text='Забыли пароль?'
       textStyle={styles.linkButton}

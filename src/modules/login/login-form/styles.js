@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   outlineButtonText: {
-    color: THEME.MINE_SHAFT,
+    color: THEME.CERULEAN,
   },
   linkButton: {
     alignSelf: 'center',

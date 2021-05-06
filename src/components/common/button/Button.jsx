@@ -7,10 +7,18 @@ export const Button = ({
   children,
   styleButton,
   onPress,
-}) => (
-  <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
-    <View style={{ ...styles.button, ...styleButton }}>
-      {children}
-    </View>
-  </TouchableOpacity>
-)
+  outline = false
+}) => {
+  const style = {
+    ...styles.button,
+    ...styleButton,
+  }
+
+  return (
+    <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
+      <View style={outline ? { ...style, ...styles.outlineButton } : { ...style }}>
+        {children}
+      </View>
+    </TouchableOpacity>
+  )
+}
