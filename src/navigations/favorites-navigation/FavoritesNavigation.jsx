@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { FAVORITES } from '../../constants'
+import { FAVORITES, SCREENS_TITLES } from '../../constants'
 import { FavoritesScreen } from '../../screens'
 import { Header } from '../../components/header'
 
@@ -15,7 +15,7 @@ export const FavoritesNavigation = () => (
       name={FAVORITES}
       component={FavoritesScreen}
       options={{
-        title: 'Избранное',
+        title: SCREENS_TITLES[FAVORITES],
         header: ({ scene: { descriptor } }) => <Header {...descriptor} />,
       }}
     />

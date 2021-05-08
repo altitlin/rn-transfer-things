@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { MESSAGES } from '../../constants'
+import { MESSAGES, SCREENS_TITLES } from '../../constants'
 import { MessagesScreen } from '../../screens'
 import { Header } from '../../components/header'
 
@@ -15,7 +15,7 @@ export const MessagesNavigation = () => (
       name={MESSAGES}
       component={MessagesScreen}
       options={{
-        title: 'Сообщения',
+        title: SCREENS_TITLES[MESSAGES],
         header: ({ scene: { descriptor } }) => <Header {...descriptor} />,
       }}
     />
