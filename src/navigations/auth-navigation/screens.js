@@ -1,9 +1,9 @@
-import { MAIN, SIGNIN, SIGNUP } from '../../constants'
+import { SPLASH, SIGNIN, SIGNUP } from '../../constants'
 import { SplashScreen, SignInScreen, SignUpScreen } from '../../screens'
 
 export const screens = [
   {
-    name: MAIN,
+    name: SPLASH,
     component: SplashScreen,
   },
   {

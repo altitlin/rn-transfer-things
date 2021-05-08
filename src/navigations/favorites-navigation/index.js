@@ -1,0 +1,1 @@
+export { FavoritesNavigation } from './FavoritesNavigation'

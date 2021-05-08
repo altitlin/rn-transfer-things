@@ -5,16 +5,16 @@ import { HOME, PROFILE, MESSAGES, FAVORITES } from '../../constants'
 import {
   HomeScreen,
   ProfileScreen,
-  MessagesScreen,
-  FavoritesScreen,
 } from '../../screens'
+import { MessagesNavigation } from '../messages-navigation'
+import { FavoritesNavigation } from '../favorites-navigation'
 
 export const screens = [
   {
     name: HOME,
     component: HomeScreen,
     options: {
-      drawerLabel: 'Домой',
+      title: 'Домой',
       drawerIcon: () => <FontAwesome name='home' size={24} color='#444444' />,
     },
   },
@@ -22,23 +22,23 @@ export const screens = [
     name: PROFILE,
     component: ProfileScreen,
     options: {
-      drawerLabel: 'Профиль',
+      title: 'Профиль',
       drawerIcon: () => <AntDesign name='user' size={24} color='#444444' />,
     },
   },
   {
     name: MESSAGES,
-    component: MessagesScreen,
+    component: MessagesNavigation,
     options: {
-      drawerLabel: 'Сообщения',
+      title: 'Сообщения',
       drawerIcon: () => <AntDesign name='message1' size={24} color='#444444' />,
     },
   },
   {
     name: FAVORITES,
-    component: FavoritesScreen,
+    component: FavoritesNavigation,
     options: {
-      drawerLabel: 'Избранное',
+      title: 'Избранное',
       drawerIcon: () => <MaterialIcons name='stars' size={24} color='#444444' />,
     },
   },
