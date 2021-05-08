@@ -13,13 +13,10 @@ export const styles = StyleSheet.create({
     height: 100,
     width: '100%',
   },
-  menuButton: {
-    width: 40,
-    height: 40,
-    backgroundColor: THEME.MACARONI,
-    borderRadius: 0,
-    paddingVertical: 0,
+  headerLeft: {
     marginRight: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   headerText: {
     color: THEME.WHITE,

@@ -1,31 +1,18 @@
 import React from 'react'
 import { View } from 'react-native'
-import { MaterialIcons } from '@expo/vector-icons'
 
 import { Text } from '../common'
-import { withButtonIcon } from '../../hocs'
 
 import { styles } from './styles'
-
-const ButtonIcon = withButtonIcon(MaterialIcons, {
-  name: 'menu',
-  size: 40,
-  color: '#ffffff',
-})
 
 export const Header = ({
   options: {
     title,
   },
-  navigation: {
-    openDrawer,
-  },
+  renderHeaderLeft,
 }) => (
   <View style={styles.header}>
-    <ButtonIcon
-      styleButton={styles.menuButton}
-      onPress={openDrawer}
-    />
+    <View style={styles.headerLeft}>{renderHeaderLeft()}</View>
     <Text style={styles.headerText}>{title}</Text>
   </View>
 )

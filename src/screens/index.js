@@ -1,5 +1,6 @@
 export * from './home-screen'
 export * from './messages-screen'
+export * from './message-screen'
 export * from './favorites-screen'
 export * from './profile-screen'
 export * from './splash-screen'

@@ -1,6 +1,7 @@
 export const HOME = 'Home'
 export const PROFILE = 'Profile'
 export const MESSAGES = 'Messages'
+export const MESSAGE = 'Message'
 export const FAVORITES = 'Favorites'
 export const SPLASH = 'SPLASH'
 export const SIGNIN = 'SignIn'
