@@ -1,7 +1,13 @@
 import React from 'react'
 import { View } from 'react-native'
 
-import { TextInput, Button, LinkButton, Text } from '../../../components/common'
+import { SIGNUP } from '../../../constants'
+import {
+  TextInput,
+  Button,
+  LinkButton,
+  Text
+} from '../../../components/common'
 
 import { styles } from './styles'
 
@@ -9,6 +15,7 @@ export const LoginForm = ({
   values,
   handleSubmit,
   handleChange,
+  navigate,
 }) => (
   <View>
     <TextInput
@@ -29,10 +36,24 @@ export const LoginForm = ({
       secureTextEntry
     />
     <Button
-      styleButton={styles.buttonSubmit}
+      styleButton={styles.signInButton}
       onPress={handleSubmit}
     >
-      <Text style={styles.buttonSubmitText}>Войти</Text>
+      <Text style={styles.buttonText}>Войти</Text>
+    </Button>
+    <Button
+      styleButton={styles.signUpButton}
+      onPress={() => navigate(SIGNUP)}
+      outline
+    >
+      <Text
+        style={{
+          ...styles.buttonText,
+          ...styles.outlineButtonText
+        }}
+      >
+        Зарегистрироваться
+      </Text>
     </Button>
     <LinkButton
       text='Забыли пароль?'

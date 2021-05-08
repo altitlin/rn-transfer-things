@@ -4,10 +4,10 @@ import { NavigationContainer } from '@react-navigation/native'
 import { AuthContext } from '../../context'
 import { withLoading } from '../../hocs'
 import { DrawerNavigation } from '../drawer-navigation'
-import { MainNavigation } from '../main-navigation'
+import { AuthNavigation } from '../auth-navigation'
 
 const AppNavigationComponent = ({ userToken }) => (
-  !userToken ? <MainNavigation /> : <DrawerNavigation />
+  !userToken ? <AuthNavigation /> : <DrawerNavigation />
 )
 
 const AppNavigationComponentWithLoading = withLoading(AppNavigationComponent)

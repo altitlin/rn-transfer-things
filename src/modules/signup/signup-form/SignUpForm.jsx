@@ -9,6 +9,7 @@ export const SignUpForm = ({
   values,
   handleSubmit,
   handleChange,
+  goBack,
 }) => (
   <View>
     <TextInput
@@ -39,10 +40,24 @@ export const SignUpForm = ({
       secureTextEntry
     />
     <Button
-      styleButton={styles.buttonSubmit}
+      styleButton={styles.signUpButton}
       onPress={handleSubmit}
     >
-      <Text style={styles.buttonSubmitText}>Зарегистрироваться</Text>
+      <Text style={styles.buttonText}>Зарегистрироваться</Text>
+    </Button>
+    <Button
+      styleButton={styles.signInButton}
+      onPress={() => goBack()}
+      outline
+    >
+      <Text
+        style={{
+          ...styles.buttonText,
+          ...styles.outlineButtonText
+        }}
+      >
+        Войти
+      </Text>
     </Button>
   </View>
 )

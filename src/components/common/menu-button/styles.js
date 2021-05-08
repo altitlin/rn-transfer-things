@@ -18,5 +18,5 @@ export const styles = StyleSheet.create({
     height: 50,
     borderRadius: 50 / 2,
     backgroundColor: THEME.MINE_SHAFT,
-  }
+  },
 })

@@ -1,14 +1,14 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { MAIN } from '../../constants'
+import { SPLASH } from '../../constants'
 import { screens } from './screens'
 
 const { Navigator, Screen } = createStackNavigator()
 
-export const MainNavigation = () => (
+export const AuthNavigation = () => (
   <Navigator
-    initialRouteName={MAIN}
+    initialRouteName={SPLASH}
     headerMode='none'
   >
     {screens.map((screen, index) => (
