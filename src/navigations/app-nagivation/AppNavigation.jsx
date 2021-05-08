@@ -7,7 +7,7 @@ import { DrawerNavigation } from '../drawer-navigation'
 import { AuthNavigation } from '../auth-navigation'
 
 const AppNavigationComponent = ({ userToken }) => (
-  userToken ? <AuthNavigation /> : <DrawerNavigation />
+  !userToken ? <AuthNavigation /> : <DrawerNavigation />
 )
 
 const AppNavigationComponentWithLoading = withLoading(AppNavigationComponent)
