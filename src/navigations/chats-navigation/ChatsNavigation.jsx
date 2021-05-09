@@ -1,14 +1,14 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { MESSAGES } from '../../constants'
+import { CHATS } from '../../constants'
 import { screens } from './screens'
 
 const { Navigator, Screen } = createStackNavigator()
 
-export const MessagesNavigation = () => (
+export const ChatsNavigation = () => (
   <Navigator
-    initialRouteName={MESSAGES}
+    initialRouteName={CHATS}
   >
     {screens.map((screen, index) => (
       <Screen

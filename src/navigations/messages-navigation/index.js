@@ -1,1 +1,0 @@
-export { MessagesNavigation } from './MessagesNavigation'

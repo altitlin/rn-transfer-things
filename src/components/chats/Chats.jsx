@@ -1,20 +1,20 @@
 import React from 'react'
 import { FlatList } from 'react-native'
 
-import { MESSAGE } from '../../constants'
+import { CHAT_ROOM } from '../../constants'
 import { data } from './data'
-import { MessageItem } from './message-item'
+import { ChatItem } from './chat-item'
 
-export const Messages = ({
+export const Chats = ({
   navigate
 }) => (
   <FlatList
     data={data}
     keyExtractor={({ id }) => id.toString()}
     renderItem={({ item }) => (
-      <MessageItem
+      <ChatItem
         {...item}
-        onPress={() => navigate(MESSAGE, { ...item })}
+        onPress={() => navigate(CHAT_ROOM, { ...item })}
       />
     )}
   />

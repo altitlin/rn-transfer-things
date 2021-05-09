@@ -1,8 +1,8 @@
 import React from 'react'
 import { MaterialIcons, SimpleLineIcons } from '@expo/vector-icons'
 
-import { MESSAGES, MESSAGE, SCREENS_TITLES, THEME } from '../../constants'
-import { MessagesScreen, MessageScreen } from '../../screens'
+import { CHATS, CHAT_ROOM, SCREENS_TITLES, THEME } from '../../constants'
+import { ChatsScreen, ChatRoomScreen } from '../../screens'
 import { Avatar } from '../../components/common'
 import { Header } from '../../components/header'
 import { withButtonIcon } from '../../hocs'
@@ -35,10 +35,10 @@ const BackButton = withButtonIcon(SimpleLineIcons, {
 
 export const screens = [
   {
-    name: MESSAGES,
-    component: MessagesScreen,
+    name: CHATS,
+    component: ChatsScreen,
     options: {
-      title: SCREENS_TITLES[MESSAGES],
+      title: SCREENS_TITLES[CHATS],
       header: ({ scene: { descriptor } }) => (
         <Header
           {...descriptor}
@@ -53,8 +53,8 @@ export const screens = [
     },
   },
   {
-    name: MESSAGE,
-    component: MessageScreen,
+    name: CHAT_ROOM,
+    component: ChatRoomScreen,
     options: ({
       route: { params: { messageSender: title, avatar } }
     }) => ({

@@ -7,12 +7,14 @@ export const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     padding: 10,
     borderBottomColor: THEME.MERCURY,
     borderBottomWidth: 2,
     borderStyle: 'solid',
+  },
+  leftContainer: {
+    flexDirection: 'row',
   },
   userLogo: {
     width: 50,
@@ -20,20 +22,24 @@ export const styles = StyleSheet.create({
     borderRadius: 50 / 2,
     marginRight: 10,
   },
-  text: {
+  midContainer: {
     alignSelf: 'center',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    flexDirection: 'column',
   },
-  sender: {
+  userName: {
     color: THEME.DOVE_GRAY,
-    fontSize: 14,
-    lineHeight: 16,
+    fontSize: 16,
+    fontWeight: 'bold',
+    lineHeight: 18,
     letterSpacing: 0.75,
+    marginBottom: 5,
   },
   lastMessage: {
     color: THEME.DOVE_GRAY,
+    fontSize: 12,
+    lineHeight: 14,
+    letterSpacing: 0.75,
+  },
+  time: {
     fontSize: 12,
     lineHeight: 14,
     letterSpacing: 0.75,

@@ -2,16 +2,16 @@ import React from 'react'
 import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-import { Messages } from '../../components/messages'
+import { Chats } from '../../components/chats'
 
 import { styles } from './styles'
 
-export const MessagesScreen = () => {
+export const ChatsScreen = () => {
   const { navigate } = useNavigation()
 
   return (
     <View style={styles.wrapper}>
-      <Messages
+      <Chats
         navigate={navigate}
       />
     </View>

@@ -12,9 +12,8 @@ import { styles } from './styles'
 export const HomeScreen = () => {
   const { openDrawer } = useNavigation()
 
+  const [searchFromGeo, setSearchFromGeo] = useState('ул. Урицкого, д. 22')
   const [searchToGeo, setSearchToGeo] = useState('')
-
-  const onChangeText = text => setSearchToGeo(text)
 
   return (
     <View style={styles.wrapper}>
@@ -25,7 +24,13 @@ export const HomeScreen = () => {
           <View style={styles.containerIcon}>
             <FontAwesome name='map-marker' size={24} color={THEME.MINE_SHAFT} />
           </View>
-          <Text>Текущий адрес</Text>
+          <TextInput
+            name='search-to-get'
+            placeholder='Куда перевезти?'
+            value={searchFromGeo}
+            style={styles.searchToGeo}
+            onChangeText={text => setSearchFromGeo(text)}
+          />
         </View>
         <View style={styles.blockSearch}>
           <View style={styles.containerIcon}>
@@ -36,7 +41,7 @@ export const HomeScreen = () => {
             placeholder='Куда перевезти?'
             value={searchToGeo}
             style={styles.searchToGeo}
-            onChangeText={onChangeText}
+            onChangeText={text => setSearchToGeo(text)}
           />
         </View>
       </View>

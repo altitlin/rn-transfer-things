@@ -1,12 +1,12 @@
 import React from 'react'
 import { FontAwesome, AntDesign, MaterialIcons } from '@expo/vector-icons'
 
-import { HOME, PROFILE, MESSAGES, FAVORITES, SCREENS_TITLES } from '../../constants'
+import { HOME, PROFILE, CHATS, FAVORITES, SCREENS_TITLES } from '../../constants'
 import {
   HomeScreen,
   ProfileScreen,
 } from '../../screens'
-import { MessagesNavigation } from '../messages-navigation'
+import { ChatsNavigation } from '../chats-navigation'
 import { FavoritesNavigation } from '../favorites-navigation'
 
 export const screens = [
@@ -27,10 +27,10 @@ export const screens = [
     },
   },
   {
-    name: MESSAGES,
-    component: MessagesNavigation,
+    name: CHATS,
+    component: ChatsNavigation,
     options: {
-      title: SCREENS_TITLES[MESSAGES],
+      title: SCREENS_TITLES[CHATS],
       drawerIcon: () => <AntDesign name='message1' size={24} color='#444444' />,
     },
   },
