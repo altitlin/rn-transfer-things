@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, SIGNUP, TOGGLE_IS_LOADING } from './types'
+import { LOGIN, LOGOUT, SIGNUP } from './types'
 
 export const handlers = {
   [LOGIN]: (state, payload) => ({
@@ -7,16 +7,11 @@ export const handlers = {
   }),
   [LOGOUT]: state => ({
     ...state,
-    userName: null,
-    userToken: null,
+    token: null,
   }),
   [SIGNUP]: (state, payload) => ({
     ...state,
     ...payload,
-  }),
-  [TOGGLE_IS_LOADING]: state => ({
-    ...state,
-    isLoading: !state.isLoading,
   }),
   DEFAULT: state => state,
 }

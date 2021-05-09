@@ -5,25 +5,17 @@ import { useFormik } from 'formik'
 import { AuthContext } from '../../context'
 import { LoginForm } from './login-form'
 import { INITIAL_VALUES } from './login-form/constants'
+import { validationSchema } from './validationSchema'
 
 export const Login = () => {
   const { navigate } = useNavigation()
 
-  const { login, toggleIsLoading } = useContext(AuthContext)
+  const { login } = useContext(AuthContext)
 
   const formik = useFormik({
     initialValues: INITIAL_VALUES,
-    onSubmit: values => {
-      toggleIsLoading()
-
-      setTimeout(() => {
-        login({
-          userName: values.phone,
-          userToken: values.password,
-        })
-        toggleIsLoading()
-      }, 1500)
-    }
+    validationSchema,
+    onSubmit: values => login(values)
   })
 
   return (

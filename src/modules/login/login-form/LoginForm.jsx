@@ -13,28 +13,43 @@ import { styles } from './styles'
 
 export const LoginForm = ({
   values,
+  errors,
+  touched,
   handleSubmit,
   handleChange,
+  handleBlur,
   navigate,
 }) => (
   <View>
-    <TextInput
-      name='phone'
-      placeholder='Введите телефон'
-      keyboardType='phone-pad'
-      value={values.phone}
-      style={styles.textInput}
-      onChangeText={handleChange('phone')}
-    />
-    <TextInput
-      autoCorrect
-      name='password'
-      placeholder='Введите пароль'
-      value={values.password}
-      style={styles.textInput}
-      onChangeText={handleChange('password')}
-      secureTextEntry
-    />
+    <View style={styles.row}>
+      <TextInput
+        name='phone'
+        placeholder='Введите телефон'
+        keyboardType='phone-pad'
+        value={values.phone}
+        style={styles.textInput}
+        onChangeText={handleChange('phone')}
+        onBlur={handleBlur('phone')}
+      />
+      {(errors.phone && touched.phone) && (
+        <Text style={styles.errorText}>{errors.phone}</Text>
+      )}
+    </View>
+    <View style={styles.row}>
+      <TextInput
+        autoCorrect
+        name='password'
+        placeholder='Введите пароль'
+        value={values.password}
+        style={styles.textInput}
+        onChangeText={handleChange('password')}
+        onBlur={handleBlur('password')}
+        secureTextEntry
+      />
+      {(errors.password && touched.password) && (
+        <Text style={styles.errorText}>{errors.password}</Text>
+      )}
+    </View>
     <Button
       styleButton={styles.signInButton}
       onPress={handleSubmit}

@@ -2,6 +2,6 @@ import React from 'react'
 
 import { Loader } from '../components/common'
 
-export const withLoading = WrappedComponent => ({ isLoading, ...props }) => (
-  isLoading ? <Loader /> : <WrappedComponent {...props} />
+export const withLoading = WrappedComponent => ({ loading, ...props }) => (
+  loading ? <Loader /> : <WrappedComponent {...props} />
 )

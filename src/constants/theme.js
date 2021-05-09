@@ -9,4 +9,5 @@ export const THEME = {
   MACARONI: '#ffb278',
   MERCURY: '#e4e4e4',
   DOVE_GRAY: '#616161',
+  ALIZARIN_CRIMSON: '#e32636',
 }

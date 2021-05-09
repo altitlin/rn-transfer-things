@@ -33,4 +33,7 @@ export const styles = StyleSheet.create({
     height: 24,
     marginRight: 15
   },
+  searchToGeo: {
+    borderBottomWidth: 0,
+  },
 })
