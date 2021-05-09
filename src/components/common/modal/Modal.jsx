@@ -19,11 +19,12 @@ export const Modal = () => {
   if (!visible) return null
 
   return (
-    <View style={styles.wrapper}>
-      <RNModal
-        animationType='slide'
-        visible={visible}
-      >
+    <RNModal
+      animationType='slide'
+      visible={visible}
+      transparent
+    >
+      <View style={styles.wrapper}>
         <View style={styles.modalWindow}>
           <ButtonIcon
             onPress={hideModal}
@@ -33,7 +34,7 @@ export const Modal = () => {
             {content}
           </View>
         </View>
-      </RNModal>
-    </View>
-  )
+      </View>
+    </RNModal>
+    )
 }
