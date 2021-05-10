@@ -9,7 +9,7 @@ import { SearchGeoBar } from '../search-geo-bar'
 
 import { styles } from './styles'
 
-export const GeoBar = () => {
+export const DestinationSearch = () => {
   const { showModal } = useContext(ModalContext)
 
   const [searchFromGeo, setSearchFromGeo] = useState('ул. Урицкого, д. 22')
@@ -31,7 +31,7 @@ export const GeoBar = () => {
           placeholder='Откуда перевезти?'
           value={searchFromGeo}
           style={styles.searchToGeo}
-          onChangeText={text => setSearchFromGeo(text)}
+          onChangeText={setSearchFromGeo}
           onFocus={onFocus}
         />
       </View>
@@ -44,7 +44,7 @@ export const GeoBar = () => {
           placeholder='Куда перевезти?'
           value={searchToGeo}
           style={styles.searchToGeo}
-          onChangeText={text => setSearchToGeo(text)}
+          onChangeText={setSearchToGeo}
           onFocus={onFocus}
         />
       </View>

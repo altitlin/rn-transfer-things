@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 
 import { MenuButton } from '../../components/common'
 import { Map } from '../../components/map'
-import { GeoBar } from '../../components/geo-bar'
+import { DestinationSearch } from '../../components/destination-search'
 
 import { styles } from './styles'
 
@@ -15,7 +15,7 @@ export const HomeScreen = () => {
     <View style={styles.wrapper}>
       <Map />
       <MenuButton onPress={openDrawer} />
-      <GeoBar />
+      <DestinationSearch />
     </View>
   )
 }

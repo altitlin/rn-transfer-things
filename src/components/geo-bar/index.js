@@ -1,1 +1,0 @@
-export { GeoBar } from './GeoBar'
