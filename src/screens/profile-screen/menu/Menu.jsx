@@ -11,7 +11,7 @@ export const Menu = ({ navigate }) => {
     <MenuItem
       key={index.toString()}
       {...item}
-      onPress={logOut}
+      onPress={() => navigate(item.routName)}
     />
   )
 
