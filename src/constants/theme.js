@@ -11,4 +11,5 @@ export const THEME = {
   DOVE_GRAY: '#616161',
   ALIZARIN_CRIMSON: '#e32636',
   BLACK: '#000000',
+  DUSTY_GRAY: '#999999',
 }
