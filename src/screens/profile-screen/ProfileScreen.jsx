@@ -1,14 +1,39 @@
 import React from 'react'
 import { View } from 'react-native'
+import { MaterialIcons } from '@expo/vector-icons'
 
-import { Text } from '../../components/common'
+import { THEME } from '../../constants'
+import { Text, Avatar } from '../../components/common'
+import { withButtonIcon } from '../../hocs'
+import { Menu } from './menu'
 
 import { styles } from './styles'
 
+const LogOutButton = withButtonIcon(MaterialIcons, {
+  name: 'logout',
+  size: 30,
+  color: THEME.CERULEAN,
+})
+
 export const ProfileScreen = () => {
   return (
-    <View>
-      <Text>ProfileScreen</Text>
+    <View style={styles.container}>
+      <View style={styles.emptyBlock}></View>
+      <View style={styles.userContainer}>
+        <Avatar
+          source={require('../../../assets/avatar.png')}
+          style={styles.userLogo}
+        />
+        <Text style={styles.userName}>Саша Титов</Text>
+        <Text style={styles.userAge}>24 года</Text>
+        <View style={styles.buttonContainer}>
+          <LogOutButton
+            styleButton={styles.logOutButton}
+            onPress={() => {}}
+          />
+        </View>
+      </View>
+      <Menu />
     </View>
   )
 }

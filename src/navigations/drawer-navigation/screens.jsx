@@ -2,12 +2,10 @@ import React from 'react'
 import { FontAwesome, AntDesign, MaterialIcons } from '@expo/vector-icons'
 
 import { HOME, PROFILE, CHATS, FAVORITES, SCREENS_TITLES } from '../../constants'
-import {
-  HomeScreen,
-  ProfileScreen,
-} from '../../screens'
+import { HomeScreen } from '../../screens'
 import { ChatsNavigation } from '../chats-navigation'
 import { FavoritesNavigation } from '../favorites-navigation'
+import { ProfileNavigation } from '../profile-navigation'
 
 export const screens = [
   {
@@ -20,7 +18,7 @@ export const screens = [
   },
   {
     name: PROFILE,
-    component: ProfileScreen,
+    component: ProfileNavigation,
     options: {
       title: SCREENS_TITLES[PROFILE],
       drawerIcon: () => <AntDesign name='user' size={24} color='#444444' />,

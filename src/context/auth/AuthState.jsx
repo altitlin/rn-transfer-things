@@ -33,7 +33,10 @@ export const AuthState = ({ children }) => {
     }
   }
 
-  const logOut = () => dispatch({ type: LOGOUT })
+  const logOut = async () => {
+    await AsyncStorage.removeItem('token')
+    dispatch({ type: LOGOUT })
+  }
 
   useEffect(() => {
     const auth = async () => {

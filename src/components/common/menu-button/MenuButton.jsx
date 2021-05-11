@@ -2,6 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
+import { THEME } from '../../../constants'
 import { withButtonIcon } from '../../../hocs'
 
 import { styles } from './styles'
@@ -9,7 +10,7 @@ import { styles } from './styles'
 const ButtonIcon = withButtonIcon(MaterialIcons, {
   name: 'menu',
   size: 24,
-  color: '#ffffff',
+  color: THEME.WHITE,
 })
 
 export const MenuButton = props => (
