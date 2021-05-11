@@ -1,8 +1,10 @@
 import React from 'react'
 import { View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 import { THEME } from '../../constants'
+import { AuthContext } from '../../context'
 import { Text, Avatar } from '../../components/common'
 import { withButtonIcon } from '../../hocs'
 import { Menu } from './menu'
@@ -16,6 +18,10 @@ const LogOutButton = withButtonIcon(MaterialIcons, {
 })
 
 export const ProfileScreen = () => {
+  const { navigate } = useNavigation()
+
+  const { logOut } = useContext(AuthContext)
+
   return (
     <View style={styles.container}>
       <View style={styles.emptyBlock}></View>
@@ -29,11 +35,11 @@ export const ProfileScreen = () => {
         <View style={styles.buttonContainer}>
           <LogOutButton
             styleButton={styles.logOutButton}
-            onPress={() => {}}
+            onPress={logOut}
           />
         </View>
       </View>
-      <Menu />
+      <Menu navigate={navigate} />
     </View>
   )
 }

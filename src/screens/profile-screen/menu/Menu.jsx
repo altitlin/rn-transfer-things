@@ -1,15 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { View } from 'react-native'
 
-import { AuthContext } from '../../../context'
 import { MenuItem } from './MenuItem'
 import { menuItems } from './config'
 
 import { styles } from './styles'
 
-export const Menu = () => {
-  const { logOut } = useContext(AuthContext)
-
+export const Menu = ({ navigate }) => {
   const renderMenuItem = (item, index) => (
     <MenuItem
       key={index.toString()}
