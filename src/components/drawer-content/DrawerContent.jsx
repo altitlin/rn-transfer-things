@@ -12,7 +12,7 @@ export const DrawerContent = props => {
     <View style={styles.wrapper}>
       <View style={styles.header}>
         <Avatar
-          source={require('../../../assets/avatar.png')}
+          source={require('../../../assets/images/avatar.png')}
           style={styles.avatar}
         />
         <Text style={styles.title}>Александр Титов</Text>

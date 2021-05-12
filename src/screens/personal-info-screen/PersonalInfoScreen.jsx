@@ -21,7 +21,7 @@ export const PersonalInfoScreen = () => {
       <View style={styles.avaterContainer}>
         <Avatar
           style={styles.avatar}
-          source={require('../../../assets/avatar.png')}
+          source={require('../../../assets/images/avatar.png')}
         />
         <View style={styles.editImageIconContainer}>
           <EditImageIcon

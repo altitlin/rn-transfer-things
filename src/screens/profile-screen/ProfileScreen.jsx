@@ -27,7 +27,7 @@ export const ProfileScreen = () => {
       <View style={styles.emptyBlock}></View>
       <View style={styles.userContainer}>
         <Avatar
-          source={require('../../../assets/avatar.png')}
+          source={require('../../../assets/images/avatar.png')}
           style={styles.userLogo}
         />
         <Text style={styles.userName}>Саша Титов</Text>
