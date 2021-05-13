@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { View, TouchableOpacity } from 'react-native'
+import { View } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
 
 import { THEME } from '../../constants'
-import { TextInput, Text } from '../common'
+import { TextInput } from '../common'
 
 import { styles } from './styles'
 
@@ -25,11 +25,6 @@ export const SearchGeoBar = () => {
           autoFocus
         />
       </View>
-      <TouchableOpacity activeOpacity={0.7} onPress={() => {}}>
-        <Text style={styles.text}>
-          Карта
-        </Text>
-      </TouchableOpacity>
     </View>
   )
 }
