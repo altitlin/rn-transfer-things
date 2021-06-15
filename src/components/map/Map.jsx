@@ -30,7 +30,7 @@ export const Map = () => {
       >
         <Marker
           coordinate={coordinateMarker}
-          image={require('../../../assets/map-marker.png')}
+          image={require('../../../assets/images/map-marker.png')}
           onDragStart={() => {}}
           onDragEnd={onDragEnd}
           draggable
